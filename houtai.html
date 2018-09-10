@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta  min-width=870px name="viewport" content="width=device-width initial-scale=1">
+	<title>后台</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/houtaipractice.css">
+	
+</head>
+<body>
+<!-- 导航栏 -->
+<nav class="navbar navbar-default">
+ <div class="container-fluid">
+ 	<!-- 小屏幕导航按钮和Logo -->
+ 	<div class="navbar-header">
+ 		<button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+ 			<span class="icon-bar"></span>
+ 			<span class="icon-bar"></span>
+ 			<span class="icon-bar"></span>
+ 		</button>
+ 		<a  class="navbar-brand" href="index.html">
+ 			<h2>GS Admin</h2>
+ 		</a>
+ 	</div>
+ 	<!-- 小屏幕导航按钮和logo -->
+ 	<!-- 导航 -->
+ 	<div class="navbar-collapse collapse">
+ 		<ul class="nav navbar-nav">
+ 			<li class="active"><a href=""><span class="glyphicon glyphicon-home"></span>&nbsp;后台首页</a></li>
+ 			<li><a href="userlist.html"><span class="glyphicon glyphicon-user"></span>&nbsp;用户管理</a></li>
+ 			<li><a href="userarticle.html"><span class="glyphicon glyphicon-list-alt"></span>&nbsp;内容管理</a></li>
+ 			<li><a href="usertag.html"><span class="glyphicon glyphicon-tags"></span>&nbsp;&nbsp;标签管理</a></li>
+ 		</ul>
+ 		<ul class="nav navbar-nav navbar-right">
+ 			<li>
+
+<li class="dropdown">
+  <a id="a1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    admin
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" aria-labelledby="a1">
+    <li><a href="#"><span class="glyphicon glyphicon-bell"></span>&nbsp;前台首页</a></li>
+    <li><a href="#"><span class="glyphicon glyphicon-user"></span>&nbsp;个人主页</a></li>
+    <li><a href="#"><span class="glyphicon glyphicon-cog"></span>&nbsp;个人设置</a></li>
+    <li><a href="#"><span class="glyphicon glyphicon-folder-close"></span>&nbsp;账户中心</a></li>
+    <li role="separator" class="divider"></li>
+    <li><a href="#"><span class="glyphicon glyphicon-star"></span>我的收藏</a></li>
+  </ul>
+</li>
+
+ 				
+ 			</li>
+ 			<li><a href=""><span class="glyphicon glyphicon-off"></span>&nbsp;退出</a></li>
+ 		</ul>
+ 	</div>
+ </div>	
+</nav>
+<!-- 警告框 -->
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="alert alert-danger alert-dismissible fade in" role="alert">
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+              <h4>网站程序有漏洞,急需修复!</h4>
+              <p>当前版本程序(V1.22)存在严重安全问题,容易被攻击,请即刻修复</p>
+              <p>
+               <button type="button" class="btn btn-danger">立即修复</button>
+               <button type="button" class="btn btn-default" data-dismiss="alert">稍后处理</button><!-- data-dismiss="alert":作用就是关闭当前的弹出框 -->
+              </p>
+            </div>
+		</div>
+		<!-- 两个列表组 -->
+		<div class="col-md-6">
+			
+            <div class="panel panel-default">
+      <!-- Default panel contents -->
+      <div class="panel-heading">网站数据统计</div>
+      
+      <!-- Table -->
+      <table class="table table-hover">
+        <thead>
+        <tr>
+        	<th>统计项目</th><th>昨日</th><th>今日</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+        	<th>注册会员</th><td>20</td><td>40</td>
+        </tr>
+        <tr>
+        	<th>登录会员</th><td>320</td><td>461</td>
+        </tr>
+        <tr>
+        	<th>发帖数量</th><td>620</td><td>540</td>
+        </tr>
+        </tbody>
+        <tfoot></tfoot>
+      </table>
+    </div>
+
+		</div>
+		<div class="col-md-6">
+			<div class="panel panel-default">
+             <div class="panel-heading">
+              <h3 class="panel-title">网站热帖</h3>
+             </div>
+             
+               <ul class="list-group">
+                 <a href="" class="list-group-item"><span class="glyphicon glyphicon-link"></span>&nbsp;Cras justo odio<span class="pull-right">2018/05/07</span></a>
+                 <a href="" class="list-group-item"><span class="glyphicon glyphicon-link"></span>&nbsp;Dapibus ac facilisis in<span class="pull-right">2018/05/07</span></a>
+                 <a href="" class="list-group-item"><span class="glyphicon glyphicon-link"></span>&nbsp;Morbi leo risus<span class="pull-right">2018/05/07</span></a>
+                 <a href="" class="list-group-item"><span class="glyphicon glyphicon-link"></span>&nbsp;Porta ac consectetur ac<span class="pull-right">2018/05/07</span></a>
+                 <a href="" class="list-group-item"><span class="glyphicon glyphicon-link"></span>&nbsp;Vestibulum at eros<span class="pull-right">2018/05/07</span></a>
+               </ul>
+            </div>
+		</div>
+	</div>
+</div>
+<!-- 统计表格以及cup使用 -->
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-6">
+			<div class="panel panel-default">
+				<div class="panel-heading">访客统计</div>
+				<div class="panel-body">
+					<canvas id="canvas" class="col-md-12"></canvas>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div class="panel panel-default">
+				<div class="panel-heading">服务器状态</div>
+				<div class="panel-body">
+					内存使用率:40%
+					<div class="progress">
+                       <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                       <span class="sr-only">40% Complete (success)</span>
+                       </div>
+                    </div>
+                    数据库使用率:20%
+                    <div class="progress">
+                    	<div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                    		<span class="sr-only">20% Complete (info)</span>
+                    	</div>
+                    </div>
+                    磁盘使用率:60%
+                    <div class="progress">
+                    	<div class="progress-bar progress-bar-warning progress-bar-striped active" role='progressbar' style="width: 60%">
+                    		<span class="sr-only">60% Complete (warning)</span>
+                    	</div>
+                    </div>
+                    cpu使用率:80%
+                    <div class="progress">
+                    	<div class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar" style="width: 80%">
+                    		<span class="sr-only">80% Complete (warning)</span>
+                    	</div>
+                    </div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- 团队留言板 -->
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="panel panel-default">
+				<div class="panel-heading">团队留言板</div>
+				<div class="panel-body">
+					<div class="col-md-7">
+						<div class="media panel-footer">
+                          <div class="media-left">
+                            <a href="#">
+                              <img class="media-object img-circle" src="images/s1.png">
+                            </a>
+                          </div>
+                          <div class="media-body">
+                             <h4 class="media-heading">咕咕芳</h4>
+                             这是一段测试用的话
+                          </div>
+                        </div>
+
+                        <div class="media panel-footer text-right">
+                          <div class="media-body">
+                             <h4 class="media-heading">香香随</h4>
+                             这是一段测试用的话
+                          </div>
+                          <div class="media-left">
+                            <a href="#">
+                              <img class="media-object img-circle" src="images/s2.png">
+                            </a>
+                          </div>
+                        </div>
+
+                        <div class="media panel-footer text-right">
+                          <div class="media-body">
+                             <h4 class="media-heading">香香随</h4>
+                             这是一段测试用的话
+                          </div>
+                          <div class="media-left">
+                            <a href="#">
+                              <img class="media-object img-circle" src="images/s2.png">
+                            </a>
+                          </div>
+                        </div>
+
+                        <div class="media panel-footer">
+                          <div class="media-left">
+                            <a href="#">
+                              <img class="media-object img-circle" src="images/s1.png">
+                            </a>
+                          </div>
+                          <div class="media-body">
+                             <h4 class="media-heading">咕咕芳</h4>
+                             这是一段测试用的话
+                          </div>
+                        </div>
+
+
+					</div>
+
+
+					<div class="col-md-5">
+						<h3>留言板</h3>
+						<textarea class="form-control" rows="5" style="max-height: 113px" placeholder="请输入留言"></textarea>
+						<button class="btn btn-default">提交</button>
+                       
+                        <div class="panel panel-default">
+                        	<div class="panel-heading">
+                        		<p>团队联系手册</p>
+                        	</div>
+                        	<div class="panel-body">
+                        		<ul class="list-group ">
+                          <li class="list-group-item">主管:<span class="glyphicon glyphicon-phone"></span>&nbsp;1324152351</li>
+                          <li class="list-group-item">测试:<span class="glyphicon glyphicon-phone"></span>&nbsp;234623464537</li>
+                          <li class="list-group-item">客服:<span class="glyphicon glyphicon-phone"></span>&nbsp;1231234125</li>
+                          <li class="list-group-item">程序猿:<span class="glyphicon glyphicon-phone"></span>&nbsp;5763451234</li>
+                          
+                               </ul>
+
+                        	</div>
+                        </div>
+
+                    </div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/chartpractice.js"></script>
+</body>
+</html>

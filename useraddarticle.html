@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width initial-scale=1">
+	<title>发布文章</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/userlist.css">
+	
+</head>
+<body>
+<!-- 导航栏 -->
+<nav class="navbar navbar-default">
+ <div class="container-fluid">
+ 	<!-- 小屏幕导航按钮和Logo -->
+ 	<div class="navbar-header">
+ 		<button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+ 			<span class="icon-bar"></span>
+ 			<span class="icon-bar"></span>
+ 			<span class="icon-bar"></span>
+ 		</button>
+ 		<a  class="navbar-brand" href="index.html">
+ 			<h2>GS Admin</h2>
+ 		</a>
+ 	</div>
+
+  
+ 	<!-- 小屏幕导航按钮和logo -->
+ 	<!-- 导航 -->
+ 	<div class="navbar-collapse collapse">
+ 		<ul class="nav navbar-nav">
+      <li><a href="houtai.html"><span class="glyphicon glyphicon-home"></span>&nbsp;后台首页</a></li>
+      <li><a href="userlist.html"><span class="glyphicon glyphicon-user"></span>&nbsp;用户管理</a></li>
+      <li class="active"><a href="userarticle.html"><span class="glyphicon glyphicon-list-alt"></span>&nbsp;内容管理</a></li>
+      <li><a href="usertag.html"><span class="glyphicon glyphicon-tags"></span>&nbsp;&nbsp;标签管理</a></li>
+    </ul>
+ 		<ul class="nav navbar-nav navbar-right">
+ 			<li>
+
+<li class="dropdown">
+  <a id="a1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    admin
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" aria-labelledby="a1">
+    <li><a href="#"><span class="glyphicon glyphicon-bell"></span>&nbsp;前台首页</a></li>
+    <li><a href="#"><span class="glyphicon glyphicon-user"></span>&nbsp;个人主页</a></li>
+    <li><a href="#"><span class="glyphicon glyphicon-cog"></span>&nbsp;个人设置</a></li>
+    <li><a href="#"><span class="glyphicon glyphicon-folder-close"></span>&nbsp;账户中心</a></li>
+    <li role="separator" class="divider"></li>
+    <li><a href="#"><span class="glyphicon glyphicon-star"></span>我的收藏</a></li>
+  </ul>
+</li>
+
+ 			</li>
+ 			<li><a href=""><span class="glyphicon glyphicon-off"></span>&nbsp;退出</a></li>
+ 		</ul>
+ 	</div>
+ </div>	
+</nav>
+
+<!-- 主体 -->
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2">
+      <div class="list-group">
+        <a href="userarticle.html" class="list-group-item ">管理文章</a>
+        <a href="useraddarticle.html" class="list-group-item active" >添加文章</a>
+      </div>
+    </div>
+
+    <div class="col-md-8">
+      <div class="page-header">
+        <h3>发布文章</h3>
+      </div>
+      <div class="form-group">
+        <h4>标题</h4>
+        <input type="text" class="form-control" placeholder="输入文章标题">
+      </div>
+      <div class="form-group">
+        <h4>正文</h4>
+        <textarea class="form-control" rows="20" style="height: 300px" placeholder="请输入正文内容"></textarea>
+      </div>
+      <div class="form-group">
+        <div class="form-group"><input type="checkbox" id="content"><label for="content">&nbsp;全局置顶</label>
+          <div class="pull-right"><button class="btn btn-default">发表</button></div>
+        </div>
+      </div>
+      
+     
+
+
+      
+
+    </div>
+
+  </div>
+</div>
+
+
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+</body>
+</html>
